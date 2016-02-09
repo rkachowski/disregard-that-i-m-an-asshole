@@ -1,13 +1,16 @@
-chrome.extension.sendMessage({}, function(response) {
-	var readyStateCheckInterval = setInterval(function() {
-	if (document.readyState === "complete") {
-		clearInterval(readyStateCheckInterval);
+$(function(){
+    console.log("Passive aggressive fitering engaged");
 
-		// ----------------------------------------------------------
-		// This part of the script triggers when page is done loading
-		console.log("Hello. This message was sent from scripts/inject.js");
-		// ----------------------------------------------------------
-
-	}
-	}, 10);
+    $("#msgs_div").bind("DOMNodeInserted", function(event){
+        var inserted = $(event.target);
+        if(inserted.is("ts-message") && ! inserted.hasClass("unprocessed"))
+        {
+            var message = inserted.find(".message_body");
+            var emojis = message.find("span[class^=emoji]");
+            if(emojis.length > 0)
+            {
+                console.log(emojis);
+            }
+        }
+    });
 });
