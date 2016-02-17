@@ -7,7 +7,7 @@ professional work environment? Are you not above fighting fire with fire?
 
 This handy dandy plugin will perform advanced sentiment analysis on all messages that 
 happen to pass into your field of vision during your everyday slack activity, and replace
-that which is subltly smug and concieted with something more overtly ridiculous.
+that which is subltly smug and conceited with something more overtly ridiculous.
 
 Turn this
 
