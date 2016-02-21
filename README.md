@@ -9,12 +9,4 @@ This handy dandy chrome extension will perform advanced sentiment analysis on al
 happen to pass into your field of vision during your everyday slack activity, and replace
 that which is subltly smug and conceited with something more overtly ridiculous.
 
-Turn this
-
-![](/wiki-images/before.jpg)
-
-Into this
-
-![](/wiki-images/after.jpg)
-
 A very petty way of reducing the smug cloud density in your life.
