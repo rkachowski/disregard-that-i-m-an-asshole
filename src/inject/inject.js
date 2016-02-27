@@ -36,7 +36,8 @@ $(function(){
             var offensive_messages = get_offenders(message);
             if(offensive_messages.length > 0)
             {
-                $(offensive_messages).replaceWith("- disregard that, i'm an asshole ");
+                $(offensive_messages).addClass("imahiddenasshole");
+                $(offensive_messages).before("<span class='replacement'>- disregard that, i'm an asshole</span>")
             }
         }
     });
