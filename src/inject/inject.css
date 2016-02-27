@@ -1,3 +1,7 @@
 .imahiddenasshole > .emoji-inner {
     display: none;
 }
+
+span.replacement.hidden {
+    display: none;
+}

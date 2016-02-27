@@ -16,8 +16,14 @@
         ],
         "persistent": true
     },
+    "page_action" :
+    {
+        "default_icon" : "icons/icon19.png",
+        "default_title" : "disregard that, i'm an asshole"
+    },
     "options_page": "src/options_custom/index.html",
     "permissions": [
+        "declarativeContent",
         "http://*.slack.com/*",
         "https://*.slack.com/*"
     ],
