@@ -25,13 +25,17 @@ $(function(){
             }
         }
 
+        console.log("yeah");
+        console.log(to_replace);
+
         return to_replace;
     }
 
-    $("#msgs_div").bind("DOMNodeInserted", function(event){
+    $(document).bind("DOMNodeInserted", function(event){
         var inserted = $(event.target);
-        if(inserted.is("ts-message") )//&& ! inserted.hasClass("unprocessed"))
-        {
+        //todo: make this suck less
+        //if(inserted.is("ts-message") )//&& ! inserted.hasClass("unprocessed"))
+        //{
             var message = inserted.find(".message_body");
             var offensive_messages = get_offenders(message);
             if(offensive_messages.length > 0)
@@ -39,6 +43,6 @@ $(function(){
                 $(offensive_messages).addClass("asshole imahiddenasshole");
                 $(offensive_messages).before("<span class='replacement'>- disregard that, i'm an asshole</span>")
             }
-        }
+        //}
     });
 });
